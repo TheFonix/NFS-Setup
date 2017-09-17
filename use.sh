@@ -3,9 +3,9 @@ sleep 2
 
 echo "Checking the APT repo's"
 sleep 2
-sudo apt-get update
-sudo apt-get install nfs-kernel-server
-sudo apt-get install nfs-common
+sudo apt-get update -y
+sudo apt-get install nfs-kernel-server -y
+sudo apt-get install nfs-common -y
 echo "Setup of APT done!"
 sleep 5
 
