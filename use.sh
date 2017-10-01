@@ -15,9 +15,14 @@ mount 10.50.0.104:/fs-data/pool/maps /mnt/maps/
 echo "Completed (Hopefully you didnt see any errors from that!"
 sleep 2
 
+echo "Adding the NFS share to Fstab!
+echo "10.50.0.104:/fs-data/pool/maps    /mnt/maps   nfs   rsize=8192,wsize=8192,timeo=14,intr" >> /etc/fstab
+sleep 1
+echo "Done"
+
 echo "Copy over the Daemon changes to allow Flo to do its magic <3"
 cp /mnt/maps/Docker-Edits/docker.js /srv/daemon/src/controllers/docker.js
 sleep 1
-echo "DOne!"
+echo "Done!"
 
 echo "xD Thank you!"
