@@ -1,5 +1,6 @@
 echo "Welcome! I will try and sort all of the NFS out for the flo server! <3"
-sleep 2
+echo "Please run this script after the install of Wings as it has commands that interact with the service!"
+sleep 3
 
 echo "Checking the APT repo's"
 sleep 2
@@ -23,6 +24,7 @@ echo "Done"
 echo "Copy over the Daemon changes to allow Flo to do its magic <3"
     cp /mnt/maps/Docker-Edits/docker.js /srv/daemon/src/controllers/docker.js
 sleep 1
-echo "Done!"
 
-echo "xD Thank you!"
+sudo service wings restart
+
+echo "Done"
